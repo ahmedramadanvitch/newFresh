@@ -1,0 +1,7 @@
+.cartItem {
+  background-color: var(--main-color);
+  height: 30px;
+  width: 30px;
+  top: -10px;
+  left: 25px;
+}

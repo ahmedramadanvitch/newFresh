@@ -1,0 +1,12 @@
+.aside {
+  /* position: absolute; */
+  /* width: 100%; */
+  background-color: var(--light-color);
+  /* background-color: red; */
+  top: 0;
+  /* right: -100%; */
+  bottom: 0;
+  z-index: 100;
+  overflow-y: auto;
+  padding: 20px 30px;
+}
