@@ -8,7 +8,7 @@ import {
   useCustomMutation,
 } from "../../QueryFunctions/useMutationFunctions";
 import {
-  NumOfItems,
+  getCart,
   useCustomQuery,
 } from "../../QueryFunctions/useQueryFunctions";
 import LoadingSpinner from "../LoadingSpinner/LoadingSpinner";
@@ -27,8 +27,7 @@ export default function Cart() {
     useCustomMutation(checkOut);
 
   // get number of items
-  let { data, isLoading, isError } = useCustomQuery("NumOfItems", NumOfItems);
-  // console.log(data?.data?.data.cartOwner);
+  let { data, isLoading, isError } = useCustomQuery("getCart", getCart);
   // check out -- add address
   function addAddress(e) {
     e.preventDefault();

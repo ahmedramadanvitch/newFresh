@@ -20,7 +20,7 @@ export function singleProductDetails(id) {
 }
 
 //(cart) get Num of items of Cart >> useQuery because it axios.get
-export function NumOfItems() {
+export function getCart() {
   return axios.get(`https://ecommerce.routemisr.com/api/v1/cart`, {
     headers: {
       token: localStorage.getItem("userToken"),

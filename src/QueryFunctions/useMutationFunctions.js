@@ -9,8 +9,12 @@ export function useCustomMutation(fn) {
     onSuccess: (data) => {
       toast.success(data?.data?.message);
       // Invalidate and refetch -- to do update on UI
-      queryClient.invalidateQueries("NumOfItems");
+      queryClient.invalidateQueries("getCart");
       queryClient.invalidateQueries("WishListArray");
+      // if (fn === clearCart) {
+      //   console.log("clearCart");
+      //   queryClient.setQueriesData("getCart", null);
+      // }
     },
     onError: (data) => {
       toast.error(data?.message);

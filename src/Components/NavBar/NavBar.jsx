@@ -4,7 +4,7 @@ import logo from "../../assets/freshcart-logo.svg";
 import styleModule from "./navbar.module.css";
 import { UserContext } from "../../Context/UserContext";
 import {
-  NumOfItems,
+  getCart,
   WishListArray,
   useCustomQuery,
 } from "../../QueryFunctions/useQueryFunctions";
@@ -19,7 +19,8 @@ const NavBar = () => {
   }
 
   // get number of items
-  let { data } = useCustomQuery("NumOfItems", NumOfItems);
+  let { data } = useCustomQuery("getCart", getCart);
+  // console.log(data?.data?.data?.products.length);
   // wishList Array To get Data
   let { data: wishListData } = useCustomQuery("WishListArray", WishListArray);
 
@@ -72,7 +73,6 @@ const NavBar = () => {
                 <li className="nav-item">
                   <NavLink to="/cart" className="nav-link">
                     Cart
-                    {/* ({data?.data?.numOfCartItems}) */}
                   </NavLink>
                 </li>
                 <li className="nav-item">
